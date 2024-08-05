@@ -29,10 +29,3 @@ jobs:
 
       - name: Deploy Project Artifacts
         run: vercel deploy --prebuilt --prod --token=${{secrets.VERCEL_TOKEN}}
-
-        uses: vercel/vercel-action@v20
-        with:
-          project_id: ${{env.VERCEL_PROJECT_ID}}
-          org_id: ${{env.VERCEL_ORG_ID}}
-          vercel_token: ${{secrets.VERCEL_TOKEN}}
-          access_tokens: ${{secrets.VERCEL_TOKEN}}
