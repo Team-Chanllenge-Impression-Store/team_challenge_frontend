@@ -24,6 +24,9 @@ const config = {
 			colors: {
 				border: "hsl(var(--border))",
 				blue: "#0A377B",
+				grey: {
+					50: "#F5F5F5",
+				},
 				input: "hsl(var(--input))",
 				ring: "hsl(var(--ring))",
 				background: "hsl(var(--background))",

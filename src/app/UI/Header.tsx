@@ -3,25 +3,36 @@ import React from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { PiShoppingCart } from "react-icons/pi";
 import { FiUser } from "react-icons/fi";
+import { IoIosSearch } from "react-icons/io";
 
 export const Header = () => {
 	return (
-		<div className="flex flex-row items-center w-full justify-between">
-			<div className="flex flex-row gap-1 justify-center items-center font-medium size-9 h-12 w-36">
-				<div className="h-12 w-12 relative">
-					<Image src="/Logo.svg" alt="logo" fill />
+		<div className="flex flex-row items-center w-full justify-between max-w-7xl z-10">
+			<div className="flex flex-row gap-14">
+				<div className="flex flex-row gap-1 justify-center items-center font-medium size-9 h-12 w-36">
+					<div className="h-12 w-12 relative">
+						<Image src="/Logo.svg" alt="logo" fill />
+					</div>
+					Gifts
 				</div>
-				Gifts
+				<ul className="flex flex-row justify-center items-center gap-10">
+					<li>Categories</li>
+					<li>How we work</li>
+					<li>About us</li>
+				</ul>
 			</div>
-			<ul className="flex flex-row justify-center items-center gap-10">
-				<li>Categories</li>
-				<li>How we work</li>
-				<li>About us</li>
-			</ul>
+
 			<ul className="flex flex-row justify-center items-center gap-4">
-				<li>
+				<li className="relative flex items-center hidden">
 					{/* TODO: Create search field */}
-					search
+					<IoIosSearch
+						size={24}
+						className="absolute insert-y-0 start-0 flex items-center pointer-events-none"
+					/>
+					<input
+						type="text"
+						className="w-full h-10 rounded-md bg-gray-50 ps-10 focus: border-gray-200"
+					/>
 				</li>
 				<li>
 					{/* TODO: Add colors for icons*/}
@@ -36,7 +47,7 @@ export const Header = () => {
 				<li className="border-2 border-blue py-3 px-6 text-white rounded-sm bg-blue">
 					Sign Up
 				</li>
-				<li>
+				<li className="hidden">
 					<FiUser size={24} />
 				</li>
 			</ul>
