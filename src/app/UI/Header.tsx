@@ -9,16 +9,16 @@ export const Header = () => {
 	return (
 		<div className="flex flex-row items-center w-full justify-between max-w-7xl z-10">
 			<div className="flex flex-row gap-14">
-				<div className="flex flex-row gap-1 justify-center items-center font-medium size-9 h-12 w-36">
+				<div className="flex flex-row gap-1 justify-center items-center font-medium text-3xl h-12 w-36">
 					<div className="h-12 w-12 relative">
 						<Image src="/Logo.svg" alt="logo" fill />
 					</div>
 					Gifts
 				</div>
 				<ul className="flex flex-row justify-center items-center gap-10">
-					<li>Categories</li>
-					<li>How we work</li>
-					<li>About us</li>
+					<li className="font-medium text-xl">Categories</li>
+					<li className="font-medium text-xl">How we work</li>
+					<li className="font-medium text-xl">About us</li>
 				</ul>
 			</div>
 
